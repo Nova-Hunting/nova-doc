@@ -77,7 +77,7 @@ theme:
 
 plugins:
   - search
-  - social
+  # - social  # Requires cairo system dependency
 
 markdown_extensions:
   - tables
