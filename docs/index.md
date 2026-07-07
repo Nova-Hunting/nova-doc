@@ -26,7 +26,7 @@ A NOVA rule can be used with the following capabilities:
 - 💬 Semantic Similarity: Detects variations of patterns with configurable thresholds.
 - ✨ LLM Matching: Uses LLM-based detection where you define a matching rule using natural language.
 
-Built with a YARA-inspired syntax, a NOVA Rule is both readable and flexible. This is an initial attempt of creating a tool for prompt hunting.
+Built with a YARA-inspired syntax, a NOVA Rule is both readable and flexible, making NOVA a production-ready tool for prompt hunting.
 
 ![](nova_overview.png)
 
