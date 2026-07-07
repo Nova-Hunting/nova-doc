@@ -14,8 +14,6 @@ How do you detect abusive usage of your system? How do you hunt for malicious pr
 
 That’s where NOVA comes in!
 
-🚧 **Disclaimer:** NOVA is in its beta phase and undergoing early testing. Expect potential bugs, incomplete features, and ongoing improvements. If you identify a bug please report it here.
-
 <p align="center">
     <img src="nova.svg" alt="NOVA Logo">
 </p>
