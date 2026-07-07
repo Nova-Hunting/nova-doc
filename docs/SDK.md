@@ -145,7 +145,7 @@ Nova(
 | `rules` | `List[NovaRule]` | `None` | Pre-loaded NovaRule objects |
 | `policy` | `Dict` or `NovaPolicy` | `None` | Policy configuration mapping patterns to actions |
 | `default_action` | `Action` | `Action.FLAG` | Default action when no policy pattern matches |
-| `llm_provider` | `str` | `None` | LLM provider: `"openai"`, `"anthropic"`, `"groq"`, `"azure"`, `"ollama"` |
+| `llm_provider` | `str` | `None` | LLM provider: `"openai"`, `"anthropic"`, `"groq"`, `"azure"`, `"ollama"`, `"openrouter"` |
 | `llm_model` | `str` | `None` | Specific model override |
 | `redaction_marker` | `str` | `"[REDACTED]"` | Text to use for redactions |
 | `auto_redact` | `bool` | `True` | Automatically redact on `REDACT` action |

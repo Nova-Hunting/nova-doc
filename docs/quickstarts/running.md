@@ -18,7 +18,9 @@ The `novarun` command-line tool is automatically added to your path when you ins
 
 ```bash
 $ novarun -h
-usage: novarun.py [-h] -r RULE (-p PROMPT | -f FILE) [-v] [-c CONFIG] [-a] [-l {openai,anthropic,azure,ollama,groq}] [-m MODEL]
+usage: novarun [-h] -r RULE (-p PROMPT | -f FILE) [-v] [-c CONFIG] [-s]
+               [-l {openai,anthropic,azure,ollama,groq,openrouter}] [-m MODEL]
+               [-a]
 
 Nova Rule Runner - Check prompts against Nova rules
 
@@ -29,10 +31,13 @@ options:
   -f, --file FILE       Path to a file containing multiple prompts (one per line)
   -v, --verbose         Enable verbose output
   -c, --config CONFIG   Path to Nova configuration file
-  -a, --all             Check against all rules in the file
-  -l, --llm {openai,anthropic,azure,ollama,groq}
-                        LLM evaluator to use
+  -s, --single          Check against only the first rule in the file (default
+                        reads all rules)
+  -l, --llm {openai,anthropic,azure,ollama,groq,openrouter}
+                        LLM evaluator to use (default: openai unless --config
+                        sets a provider)
   -m, --model MODEL     Specific model to use with the LLM evaluator
+  -a, --all             Check against all rules in the file (default behavior)
 ```
 
 !!! info
@@ -269,9 +274,14 @@ python novarun.py -r rule.nov -p "prompt" -l azure
 # Using Groq
 python novarun.py -r rule.nov -p "prompt" -l groq -m llama-3.3-70b-versatile
 
+# Using OpenRouter (OpenAI-compatible access to many models)
+python novarun.py -r rule.nov -p "prompt" -l openrouter -m openai/gpt-5.2
+
 # Using local Ollama
 python novarun.py -r rule.nov -p "prompt" -l ollama -m llama3
 ```
+
+For OpenRouter, set `OPENROUTER_API_KEY` in your environment. Optional app attribution headers can be sent by setting `OPENROUTER_HTTP_REFERER` and `OPENROUTER_APP_TITLE`.
 
 You can specify a particular model with the `-m` option:
 

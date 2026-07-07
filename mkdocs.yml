@@ -143,6 +143,9 @@ nav:
       - Installation: quickstarts/installation.md
       - Running Nova: quickstarts/running.md
 
+  - SDK:
+    - Nova SDK: SDK.md
+
   - Usecases:
     - Overview: usecases/index.md
     #- Architecture: usecases/architecture.md
@@ -150,3 +153,4 @@ nav:
     - Ollama: usecases/ollama.md
     - OpenAI: usecases/openai.md
     - Anthropic: usecases/anthropic.md
+    - OpenRouter: usecases/openrouter.md
